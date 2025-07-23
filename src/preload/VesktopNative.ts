@@ -90,6 +90,8 @@ export const VesktopNative = {
         setIcon: (iconURI: string) => invoke<void>(IpcEvents.SET_TRAY_ICON, iconURI),
         setCurrentVoiceIcon: (listener: (...args: any[]) => void) => {
             ipcRenderer.on(IpcEvents.SET_CURRENT_TRAY_ICON, listener);
+        }
+    },
     voice: {
         onToggleSelfMute: (listener: (...args: any[]) => void) => {
             ipcRenderer.on(IpcEvents.TOGGLE_SELF_MUTE, listener);
