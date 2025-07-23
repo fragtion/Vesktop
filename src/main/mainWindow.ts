@@ -572,5 +572,5 @@ export async function createWindows() {
     });
 
     initArRPC();
-    if (isLinux) initKeybinds();
+    if (isLinux || process.platform === "win32") initKeybinds();
 }
